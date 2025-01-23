@@ -4,7 +4,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { NgOptimizedImage } from '@angular/common';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
@@ -12,6 +12,7 @@ import { HeaderComponent } from '../header/header.component';
   standalone: true,
   imports: [NgOptimizedImage, 
             RouterOutlet, 
+            RouterLink,
             HeaderComponent,
             MatSidenavModule, 
             MatButtonModule, 
@@ -25,7 +26,7 @@ export class NavComponent {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.router.navigate(['home'])
+    this.router.navigate(['gamelist'])
   }
 
 }
