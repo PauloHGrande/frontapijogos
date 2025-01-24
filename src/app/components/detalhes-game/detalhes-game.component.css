@@ -1,0 +1,24 @@
+.container {
+    padding: 24px;
+    background: -webkit-linear-gradient(180deg, #97c5f0, #b7c5b027);
+}
+
+mat-grid-list {
+    color: black;
+}
+
+img {
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    padding: 24px;
+}
+
+.mat-img {
+    text-align: center;
+}
+
+.button {
+    width: 100%;
+    background: -webkit-linear-gradient(180deg, #2aa1f0, #212e95);
+}

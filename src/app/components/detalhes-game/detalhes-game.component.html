@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile><b>Title:</b> <br /><br />{{game.title}}</mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile><b>Plataform:</b> <br /><br />{{game.platforms}}</mat-grid-tile>
+        <mat-grid-tile><b>Genero:</b> <br /><br />{{game.genre}}</mat-grid-tile>
+        <mat-grid-tile><b>Ano:</b> <br /><br />{{game.year}}</mat-grid-tile>
+        <mat-grid-tile><b>Nota:</b> <br /><br />{{game.score}}</mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile><b>Introdução:</b> <br /><br />{{game.shortDescription}}</mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile><b>Descrição:</b> <br /><br />{{game.longDescription}}</mat-grid-tile>
+      </mat-grid-list>
+</div>
+<div class="mat-img">
+  <img mat-card-img [src]="game.imgUrl" />
+</div>
+<button routerLink="/gamelist" class="button mat-elevation-z8" mat-raised-button>Voltar Lista de Games...</button>

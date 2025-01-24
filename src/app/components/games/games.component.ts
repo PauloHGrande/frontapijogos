@@ -18,7 +18,7 @@ export class GamesComponent {
   game: Game = {
     id: '',
     title: '',
-    game_yer: '',
+    year: '',
     genre: '',
     platforms: '',
     score: '',
@@ -36,7 +36,7 @@ export class GamesComponent {
 
   getGames(id: any) {
       this.http.get<Game[]>(`${API_CONFIG.baseUrl}/lists/${id}/games`).subscribe(resposta => {
-        console.log(resposta)
+        //console.log(resposta)
         this.games = resposta
       })
   }

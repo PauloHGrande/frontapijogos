@@ -6,7 +6,9 @@
                 <mat-card-title>{{game.title}}</mat-card-title>
             </mat-card-header>
             <br />
-            <img mat-card-img [src]="game.imgUrl" />
+            <a routerLink="/games/{{game.id}}">
+                <img mat-card-img [src]="game.imgUrl" />
+            </a>            
             <mat-card-content>
                 <br />
                 <p>

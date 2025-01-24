@@ -1,7 +1,7 @@
 export interface Game {
     id?: any;
     title: string;
-    game_yer: any;
+    year: any;
     genre: string;
     platforms: string;
     score: any;

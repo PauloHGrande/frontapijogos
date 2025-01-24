@@ -3,6 +3,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { GamelistComponent } from './components/gamelist/gamelist.component';
 import { GamesComponent } from './components/games/games.component';
+import { DetalhesGameComponent } from './components/detalhes-game/detalhes-game.component';
 
 export const routes: Routes = [
     {
@@ -19,6 +20,10 @@ export const routes: Routes = [
             {
                 path: 'lists/:id/games',
                 component: GamesComponent
+            },
+            {
+                path: 'games/:id',
+                component: DetalhesGameComponent
             }
         ]
     }
