@@ -1,10 +1,12 @@
-<div class="container" mat-elevation-z8>
-    <h2>Lista de Jogos...</h2>
-    <div class="list-games">
+<mat-toolbar> Lista de Jogos...</mat-toolbar>
+<div class="container">
+    <div class="list">
         @for (list of gamelist; track list.id) {
-            <a routerLink="/">
-            <mat-card class="card" appearance="outlined">
-                <mat-card-content>{{list.name}}</mat-card-content>
+            <a routerLink="/lists/{{list.id}}/games">
+            <mat-card class="card mat-elevation-z8">
+                <mat-card-header>
+                    <mat-card-title>{{list.name}}</mat-card-title>
+                </mat-card-header>
               </mat-card>
             </a>  
         }

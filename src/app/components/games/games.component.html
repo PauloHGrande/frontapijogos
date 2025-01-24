@@ -1,0 +1,19 @@
+<mat-toolbar> Games...</mat-toolbar>
+<div class="container responsive-grid">
+    @for (game of games; track game.id) {
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{game.title}}</mat-card-title>
+            </mat-card-header>
+            <br />
+            <img mat-card-img [src]="game.imgUrl" />
+            <mat-card-content>
+                <br />
+                <p>
+                    {{game.shortDescription}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    }
+</div>
+<button routerLink="/gamelist" class="button mat-elevation-z8" mat-raised-button>Voltar Lista de Games...</button>

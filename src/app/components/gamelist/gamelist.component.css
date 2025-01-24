@@ -1,16 +1,21 @@
 .container {
-    width: 90%;
-    margin: auto;
-    justify-items: center;
+    padding: 24px;
+    background: -webkit-linear-gradient(180deg, #97c5f0, #b7c5b027);
+}
+
+mat-toolbar {
+    background: -webkit-linear-gradient(180deg, #2aa1f0, #212e95);
+    text-align: center;
+    color: black;
 }
 
 .card {
-    display: flex;
+    padding: 2rem;
+    display: grid;
+    grid-column: 3;
     flex-direction: row;
     margin-top: 1rem;
     background: -webkit-linear-gradient(180deg, #0F172A, #8455FF);
-    width: 500px;
-    justify-items: center;
 }
 
 a {

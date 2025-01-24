@@ -3,11 +3,12 @@ import { GameList } from '../../models/gameList';
 import { API_CONFIG } from '../../../config/api.config';
 import { HttpClient } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-gamelist',
-  imports: [MatCardModule, RouterLink],
+  imports: [MatCardModule, RouterLink, MatToolbarModule],
   providers: [],
   templateUrl: './gamelist.component.html',
   styleUrl: './gamelist.component.css'
