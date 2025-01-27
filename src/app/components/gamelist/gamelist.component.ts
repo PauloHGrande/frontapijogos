@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink, RouterModule } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-gamelist',
@@ -17,13 +18,17 @@ export class GamelistComponent {
 
   gamelist: GameList[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private spinner: NgxSpinnerService
+  ) {
     this.getList()
   }
 
   getList() {
+    this.spinner.show();
     this.http.get<GameList[]>(`${API_CONFIG.baseUrl}/lists`).subscribe(resposta => {
       this.gamelist = resposta
+      this.spinner.hide()
     })
   }
   

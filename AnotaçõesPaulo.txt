@@ -1,0 +1,14 @@
+Docker
+
+Criado o arquivo dockerfile
+
+Comandos para criar a imagem v1.
+docker build -t pauloggrande/apijogos-frontend:v1 .
+
+comando para rodar a imagem depois de criada.
+docker container run -d -p 4200:4200 pauloggrande/apijogos-frontend:v1
+
+comando para enviar para o repositorio docker hub
+docker push pauloggrande/apijogos-frontend:v1
+docker tag pauloggrande/apijogos-frontend:v1 pauloggrande/apijogos-frontend:latest
+docker push pauloggrande/apijogos-frontend:latest

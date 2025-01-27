@@ -26,7 +26,7 @@ export class NavComponent {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.router.navigate(['lists/1/games'])
+    this.router.navigate(['home'])
   }
 
 }

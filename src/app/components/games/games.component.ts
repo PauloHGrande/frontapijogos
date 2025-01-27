@@ -6,6 +6,7 @@ import { API_CONFIG } from '../../../config/api.config';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-games',
@@ -29,15 +30,18 @@ export class GamesComponent {
 
   games: Game[] = [];
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { 
+  constructor(private http: HttpClient, 
+              private route: ActivatedRoute,
+              private spinner: NgxSpinnerService) { 
     this.game.id = this.route.snapshot.paramMap.get('id')
     this.getGames(this.game.id)
   }
 
   getGames(id: any) {
+    this.spinner.show()
       this.http.get<Game[]>(`${API_CONFIG.baseUrl}/lists/${id}/games`).subscribe(resposta => {
-        //console.log(resposta)
         this.games = resposta
+        this.spinner.hide()
       })
   }
 }
